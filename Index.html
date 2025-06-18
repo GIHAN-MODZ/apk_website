@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CYBER GIHAN</title>
+  <style>
+    :root {
+      --bg-dark: #000;
+      --bg-light: #fff;
+      --text-dark: #fff;
+      --text-light: #111;
+    }body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  overflow: hidden;
+  transition: background 1s, color 0.5s;
+}
+
+.background-gihan {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #00FF00;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  font-size: 3em;
+  opacity: 2.05;
+  white-space: nowrap;
+  animation: scroll 5s linear infinite alternate;
+}
+
+@keyframes scroll {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 4em;
+  color: #00f7ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00f7ff; }
+  to { text-shadow: 0 0 20px #00f7ff, 0 0 30px #00e1ff; }
+}
+
+.buttons {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.telegram { background-color: #0088cc; }
+.facebook { background-color: #3b5998; }
+.github { background-color: #333333; }
+.about { background-color: #ff9800; }
+
+.typing {
+  margin-top: 40px;
+  font-size: 1.1em;
+  border-right: .15em solid currentColor;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing-loop 6s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing-loop {
+  0% { width: 0 }
+  50% { width: 300px }
+  100% { width: 0 }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: currentColor }
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #D8BFD8;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.4s ease, background 0.5s;
+}
+
+.toggle-btn.animate {
+  transform: rotate(360deg) scale(1.2);
+}
+
+body.light-mode {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.light-mode .toggle-btn {
+  border-color: #000;
+  color: #000;
+}
+
+  </style>
+</head>
+<body>
+  <div class="background-gihan">ᴄʏʙᴇʀ ɢɪʜᴀɴ</div>
+  <button class="toggle-btn" onclick="toggleMode()">🤫</button>
+  <div class="container">
+    <h1>𝐂𝐘𝐁𝐄𝐑 𝐆𝐈𝐇𝐀𝐍</h1> 
+    <div class="typing2">𝐈𝐅 𝐘𝐎𝐔 𝐖𝐀𝐍𝐓 𝐓𝐎 𝐇𝐈𝐑𝐄 𝐔𝐒 𝐅𝐎𝐑 𝐀𝐍𝐘 𝐏𝐀𝐈𝐃 𝐖𝐎𝐑𝐊 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐖𝐄 𝐇𝐀𝐂𝐊 𝐖𝐄 𝐋𝐄𝐀𝐊 𝐖𝐄 𝐌𝐀𝐊𝐄 𝐌𝐀𝐋𝐖𝐀𝐑𝐄 𝐖𝐄 𝐌𝐀𝐊𝐄 𝐑𝐀𝐓 𝐀𝐋𝐋</div>
+  <div class="buttons">
+      <a class="btn" href="https://wa.me/94766687628" target="_blank">WhatsApp 1</a>
+      <a class="btn" href="https://wa.me/94776477438" target="_blank">WhatsApp 2</a>
+      <a class="btn telegram" href="https://t.me/dark_sL_Shadow" target="_blank">Telegram</a>
+      <a class="btn facebook" href="https://www.facebook.com/share/16qtavHw6o/" target="_blank">Facebook</a>
+      <a class="btn github" href="https://github.com/GIHAN-MODZ?tab=repositories" target="_blank">GitHub</a>
+      <a class="btn about" href="about.html">About</a>
+    </div>
+    <div class="typing">CREATED BY CYBER GIHAN MODz</div>
+  </div>  <script>
+    function toggleMode() {
+      const body = document.body;
+      const toggleBtn = document.querySelector('.toggle-btn');
+      body.classList.toggle("light-mode");
+      toggleBtn.classList.add('animate');
+      setTimeout(() => {
+        toggleBtn.classList.remove('animate');
+      }, 500);
+    }
+  </script></body>
+</html>
